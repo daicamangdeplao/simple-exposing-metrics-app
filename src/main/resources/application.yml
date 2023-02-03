@@ -16,3 +16,14 @@ spring:
       ddl-auto: none
     show-sql: false
     defer-datasource-initialization: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+      show-components: always
